@@ -2,10 +2,8 @@ package com.cjwest13.donor.integration.model;
 
 import lombok.Data;
 
-import java.util.Date;
-
 @Data
-public class ActBlueRequestBody {
+public class ActBlueCreateCVSRequest {
     private String csv_type;
 
     private String date_range_start;

@@ -11,8 +11,7 @@ public class Designation implements Serializable {
     private double Amount;
     private String Note;
     private String Type;
-    private int FundId = 10; //General
-//    private int fundId = 218112 //Test
+    private int FundId;
     private List<CustomValue> CustomValues; //Payment ID
 
 }

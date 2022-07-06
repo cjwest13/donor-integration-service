@@ -25,7 +25,9 @@ public interface BloomerangMapper {
             @Mapping(target = "lastName", source = "donorLastName"),
             @Mapping(target = "jobTitle", source = "donorOccupation"),
             @Mapping(target = "employer", source = "donorEmployer"),
+            @Mapping(target = "primaryEmail.type", constant = "Home"),
             @Mapping(target = "primaryEmail.value", source = "donorEmail"),
+            @Mapping(target = "primaryPhone.type", constant = "Home"),
             @Mapping(target = "primaryPhone.number", source = "donorPhone"),
             @Mapping(target = "primaryAddress.type", constant = "Home"),
             @Mapping(target = "primaryAddress.street", source = ".", qualifiedByName = "translateToFullStreet"),
@@ -55,6 +57,7 @@ public interface BloomerangMapper {
         designation.setNote(donation.getRefCode1());
         designation.setType("Donations");
         designation.setFundId(10); //General; Will have to make more dynamic in later implementations possibly
+        //    private int fundId = 218112 //Test
         customValue.setValue(donation.getPaymentID());
         customValueList.add(customValue);
         designation.setCustomValues(customValueList);

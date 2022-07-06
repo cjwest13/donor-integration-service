@@ -1,9 +1,7 @@
 package com.cjwest13.donor.integration;
 
-import com.cjwest13.donor.integration.model.ActBlueCreateCVSRequest;
-import com.cjwest13.donor.integration.model.ActBlueCreateCVSResponse;
-import com.cjwest13.donor.integration.model.ActBlueDonation;
-import com.cjwest13.donor.integration.model.ActBlueGetCVSResponse;
+import com.cjwest13.donor.integration.domain.*;
+import com.cjwest13.donor.integration.model.*;
 import org.junit.jupiter.api.Test;
 import org.meanbean.test.BeanTester;
 import org.meanbean.test.Configuration;
@@ -47,6 +45,18 @@ public class DonorIntegrationServiceBeanTests extends DonorIntegrationServiceApp
         classList.add(ActBlueCreateCVSResponse.class);
         classList.add(ActBlueGetCVSResponse.class);
         classList.add(ActBlueDonation.class);
+        classList.add(BloomerangSearchListResponse.class);
+        classList.add(BloomerangSearchResponse.class);
+        classList.add(CustomValueSearch.class);
+        classList.add(ValueSearch.class);
+        classList.add(Address.class);
+        classList.add(Constituent.class);
+        classList.add(CustomValue.class);
+        classList.add(Designation.class);
+        classList.add(Donation.class);
+        classList.add(Email.class);
+        classList.add(Phone.class);
+        classList.add(Transaction.class);
         return classList;
     }
 
@@ -56,6 +66,18 @@ public class DonorIntegrationServiceBeanTests extends DonorIntegrationServiceApp
         classMap.put(ActBlueCreateCVSResponse.class, ActBlueCreateCVSResponseTest.class);
         classMap.put(ActBlueGetCVSResponse.class, ActBlueGetCVSResponseTest.class);
         classMap.put(ActBlueDonation.class, ActBlueDonationsTest.class);
+        classMap.put(BloomerangSearchListResponse.class, BloomerangSearchListResponseTest.class);
+        classMap.put(BloomerangSearchResponse.class, BloomerangSearchResponseTest.class);
+        classMap.put(CustomValueSearch.class, CustomValueSearchTest.class);
+        classMap.put(ValueSearch.class, ValueSearchTest.class);
+        classMap.put(Address.class, AddressTest.class);
+        classMap.put(Constituent.class, ConstituentTest.class);
+        classMap.put(CustomValue.class, CustomValueTest.class);
+        classMap.put(Designation.class, DesignationTest.class);
+        classMap.put(Donation.class, DonationTest.class);
+        classMap.put(Email.class, EmailTest.class);
+        classMap.put(Phone.class, PhoneTest.class);
+        classMap.put(Transaction.class, TransactionTest.class);
         return classMap;
 
     }
@@ -89,6 +111,102 @@ public class DonorIntegrationServiceBeanTests extends DonorIntegrationServiceApp
         @Override
         protected boolean canEqual(Object other) {
             return other instanceof ActBlueDonationsTest;
+        }
+    }
+
+    static class BloomerangSearchListResponseTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof BloomerangSearchListResponseTest;
+        }
+    }
+
+    static class BloomerangSearchResponseTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof BloomerangSearchResponseTest;
+        }
+    }
+
+    static class CustomValueSearchTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof CustomValueSearchTest;
+        }
+    }
+
+    static class ValueSearchTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof ValueSearchTest;
+        }
+    }
+
+    static class AddressTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof AddressTest;
+        }
+    }
+
+    static class ConstituentTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof ConstituentTest;
+        }
+    }
+
+    static class CustomValueTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof CustomValueTest;
+        }
+    }
+
+    static class DesignationTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof DesignationTest;
+        }
+    }
+
+    static class DonationTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof DonationTest;
+        }
+    }
+
+    static class EmailTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof EmailTest;
+        }
+    }
+
+    static class PhoneTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof PhoneTest;
+        }
+    }
+
+    static class TransactionTest extends ActBlueDonation {
+
+        @Override
+        protected boolean canEqual(Object other) {
+            return other instanceof TransactionTest;
         }
     }
 

@@ -19,12 +19,15 @@ public interface BloomerangMapper {
     BloomerangMapper MAPPER = Mappers.getMapper(BloomerangMapper.class);
 
     @Mappings({
+            @Mapping(target = "type", constant = "Individual"),
+            @Mapping(target = "status", constant = "Active"),
             @Mapping(target = "firstName", source = "donorFirstName"),
             @Mapping(target = "lastName", source = "donorLastName"),
             @Mapping(target = "jobTitle", source = "donorOccupation"),
             @Mapping(target = "employer", source = "donorEmployer"),
             @Mapping(target = "primaryEmail.value", source = "donorEmail"),
             @Mapping(target = "primaryPhone.number", source = "donorPhone"),
+            @Mapping(target = "primaryAddress.type", constant = "Home"),
             @Mapping(target = "primaryAddress.street", source = ".", qualifiedByName = "translateToFullStreet"),
             @Mapping(target = "primaryAddress.city", source = "donorCity"),
             @Mapping(target = "primaryAddress.state", source = "donorState"),
@@ -50,6 +53,8 @@ public interface BloomerangMapper {
         CustomValue customValue = new CustomValue();
         designation.setAmount(donation.getAmount());
         designation.setNote(donation.getRefCode1());
+        designation.setType("Donations");
+        designation.setFundId(10); //General; Will have to make more dynamic in later implementations possibly
         customValue.setValue(donation.getPaymentID());
         customValueList.add(customValue);
         designation.setCustomValues(customValueList);

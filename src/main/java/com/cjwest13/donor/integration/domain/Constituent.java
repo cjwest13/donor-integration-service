@@ -8,8 +8,8 @@ import java.util.List;
 @Data
 public class Constituent implements Serializable {
 
-    private String Type = "Individual";
-    private String Status = "Active";
+    private String Type;
+    private String Status;
     private String FirstName;
     private String LastName;
     private String JobTitle;

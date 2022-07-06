@@ -1,8 +1,6 @@
 package com.cjwest13.donor.integration.service;
 
 import com.cjwest13.donor.integration.DonorIntegrationServiceApplicationTests;
-import com.cjwest13.donor.integration.actblue.ActBlueAPIImpl;
-import com.cjwest13.donor.integration.bloomerang.BloomerangAPI;
 import com.cjwest13.donor.integration.bloomerang.BloomerangAPIImpl;
 import com.cjwest13.donor.integration.domain.*;
 import com.cjwest13.donor.integration.model.ActBlueDonation;

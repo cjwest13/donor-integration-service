@@ -1,7 +1,7 @@
 # Getting Started
 
 ### About Application
-The application is an integration service between donation platforms and the donor database platform 
+The application is an integration service between donation platforms (current use Case is [ActBlue](https://secure.actblue.com/)) and the donor database platform 
 [Bloomerang](https://bloomerang.co). <br/><br/> This project is still under development!
 
 ### To Do List
